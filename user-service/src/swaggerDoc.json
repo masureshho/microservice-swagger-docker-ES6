@@ -1,0 +1,105 @@
+{
+	"info": {
+		"title": "microservice-test",
+		"version": "1.0.0",
+		"description": "microservice-test"
+	},
+	"swagger": "2.0",
+	"paths": {
+		"/api/random": {
+			"get": {
+				"tags": [
+					"/api"
+				],
+				"description": "Returns hi,",
+				"responses": {
+					"200": {
+						"description": "random page"
+					}
+				}
+			}
+		},
+		"/api/user": {
+			"get": {
+				"tags": [
+					"Users"
+				],
+				"description": "get users",
+				"responses": {
+					"200": {
+						"description": "User Model",
+						"schema": {
+							"$ref": "#/definitions/userModel"
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"Users"
+				],
+				"description": "get users",
+				"consumes": [
+					"application/json"
+				],
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"name": "person",
+						"in": "body",
+						"required": true,
+						"description": "The person to create.",
+						"schema": {
+							"$ref": "#/definitions/userModel"
+						}
+					}
+				],
+				"responses": {
+					"204": {
+						"description": "Person succesfully created."
+					},
+					"405": {
+						"description": "Invalid input"
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"userModel": {
+			"type": "object",
+			"required": [
+				"name",
+				"username",
+				"location",
+				"password"
+			],
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"username": {
+					"type": "string"
+				},
+				"location": {
+					"type": "string"
+				},
+				"password": {
+					"type": "string"
+				}
+			},
+			"example": {
+				"name": "Suresh",
+				"username": "suresh2049",
+				"password": "password123",
+				"location": "Ratopul"
+			}
+		}
+	},
+	"responses": {},
+	"parameters": {},
+	"securityDefinitions": {},
+	"tags": []
+}

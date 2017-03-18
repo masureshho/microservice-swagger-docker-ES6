@@ -1,0 +1,13 @@
+ports:
+  http: 8080
+  debug: 5858
+
+auth:
+  jwt_secret: 'supersecret'
+
+mongo:
+  # url: 'mongodb://localhost/userService'
+  url: 'mongodb://mongo:27017/userService'
+
+# none/debug/info
+loglevel: info

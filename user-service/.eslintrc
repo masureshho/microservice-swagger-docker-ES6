@@ -1,0 +1,42 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {"ecmaVersion": 2017},
+  "plugins": ["import", "node"],
+  "extends": ["eslint:recommended", "plugin:node/recommended", "eslint-config-airbnb"],
+  "rules":{
+    "no-multi-spaces": 0,
+    "import/default": 0,
+    "import/no-duplicates": 0,
+    "import/named": 0,
+    "import/namespace": 0,
+    "import/no-unresolved": 0,
+    "import/no-named-as-default": 2,
+    "node/no-unsupported-features": ["error", {
+        "version": 6,
+        "ignores": ["modules"]
+    }],
+    "comma-dangle": 0,
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "no-console": 0,
+    "no-alert": 0,
+    "no-unused-vars": 1,
+    "func-names": 0,
+    "key-spacing": 0,
+    "max-len": [2, 120, 2],
+    "no-var": 0,
+    "eol-last": ["error", "never"]
+  },
+  "settings": {
+    "import/parser": "babel-eslint",
+    "import/resolve": {
+      moduleDirectory: ["node_modules", "src"]
+    }
+  },
+  "globals": {
+    "socket": true
+  }
+}
