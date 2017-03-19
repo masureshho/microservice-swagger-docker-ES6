@@ -10,5 +10,8 @@ Example project which inclues:
 - Swagger 2.0
 - MongoDB
 
+### build docker by
+`docker-compose build`
+
 ### Running docker by
-`docker-compose up`.
+`docker-compose up`

@@ -6,19 +6,6 @@
 	},
 	"swagger": "2.0",
 	"paths": {
-		"/api/random": {
-			"get": {
-				"tags": [
-					"/api"
-				],
-				"description": "Returns hi,",
-				"responses": {
-					"200": {
-						"description": "random page"
-					}
-				}
-			}
-		},
 		"/api/user": {
 			"get": {
 				"tags": [
